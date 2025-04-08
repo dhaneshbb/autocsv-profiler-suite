@@ -1,7 +1,8 @@
 
 # AutoCSV Profiler Suite
 
-[![Watch the video](assets/video-thumbnail.png)](https://github.com/dhaneshbb/AutoCSV-Profiler-Suite/raw/main/assets/video.mp4)
+▶️ [Click here to watch the demo video](https://github.com/dhaneshbb/AutoCSV-Profiler-Suite/raw/main/assets/video.mp4)
+
 
 **CSV Analysis with Isolated Environments**  
 
