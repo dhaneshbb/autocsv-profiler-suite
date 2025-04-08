@@ -109,7 +109,7 @@ AutoCSV-Profiler-Suite/
 │		└── requirements.txt
 ├── 📜 MANIFEST.in            # Distribution manifest
 ├── 📜 README.md              # Project documentation
-├── 📜 License             	  # MIT License
+├── 📜 License             	 # MIT License
 ```
 
 ---
@@ -118,7 +118,7 @@ AutoCSV-Profiler-Suite/
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/yourusername/autocsv-profiler-suite.git
+git clone https://github.com/dhaneshbb/AutoCSV-Profiler-Suite.git
 cd autocsv-profiler-suite
 ```
 
