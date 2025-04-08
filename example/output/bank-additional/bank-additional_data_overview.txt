@@ -1,0 +1,129 @@
+### dataset_info
+
+
+=== Dataset Information ===
+
+| Info                      | Details                 |
+|---------------------------|-------------------------|
+| Total Shape               | 4119 rows, 21 columns   |
+| Range Index               | 0 to 4118, 4119 entries |
+| Columns                   | 21 columns              |
+| Memory Usage              | 3173611 bytes           |
+| Total Duplicated Rows     | 0 duplicates            |
+| Missing Values Count      | 0 missing values        |
+| Missing Values Percentage | 0.00% missing values    |
+
+Data types with counts of columns:
+
+| Data Type   |   Count of Columns |
+|-------------|--------------------|
+| object      |                 11 |
+| int64       |                  5 |
+| float64     |                  5 |
+
+Numerical and Categorical Variable Counts:
+
+| Variable Type         |   Count |
+|-----------------------|---------|
+| Numerical Variables   |      10 |
+| Categorical Variables |      11 |
+
+No duplicated rows found.
+
+
+### data_overview
+
+
+=== Data Overview Table ===
+
+
+Overview for Data Type: int64
+
+|    | Column Name   | Data Type   |   Unique Count |   Missing Count |   Missing Percentage | Missing Value Category   |
+|----|---------------|-------------|----------------|-----------------|----------------------|--------------------------|
+|  0 | age           | int64       |             67 |               0 |                    0 | No Missing Values        |
+|  1 | duration      | int64       |            828 |               0 |                    0 | No Missing Values        |
+|  2 | campaign      | int64       |             25 |               0 |                    0 | No Missing Values        |
+|  3 | pdays         | int64       |             21 |               0 |                    0 | No Missing Values        |
+|  4 | previous      | int64       |              7 |               0 |                    0 | No Missing Values        |
+
+Overview for Data Type: float64
+
+|    | Column Name    | Data Type   |   Unique Count |   Missing Count |   Missing Percentage | Missing Value Category   |
+|----|----------------|-------------|----------------|-----------------|----------------------|--------------------------|
+|  0 | emp.var.rate   | float64     |             10 |               0 |                    0 | No Missing Values        |
+|  1 | cons.price.idx | float64     |             26 |               0 |                    0 | No Missing Values        |
+|  2 | cons.conf.idx  | float64     |             26 |               0 |                    0 | No Missing Values        |
+|  3 | euribor3m      | float64     |            234 |               0 |                    0 | No Missing Values        |
+|  4 | nr.employed    | float64     |             11 |               0 |                    0 | No Missing Values        |
+
+Overview for Data Type: object
+
+|    | Column Name   | Data Type   |   Unique Count |   Missing Count |   Missing Percentage | Missing Value Category   |
+|----|---------------|-------------|----------------|-----------------|----------------------|--------------------------|
+|  0 | job           | object      |             12 |               0 |                    0 | No Missing Values        |
+|  1 | marital       | object      |              4 |               0 |                    0 | No Missing Values        |
+|  2 | education     | object      |              8 |               0 |                    0 | No Missing Values        |
+|  3 | default       | object      |              3 |               0 |                    0 | No Missing Values        |
+|  4 | housing       | object      |              3 |               0 |                    0 | No Missing Values        |
+|  5 | loan          | object      |              3 |               0 |                    0 | No Missing Values        |
+|  6 | contact       | object      |              2 |               0 |                    0 | No Missing Values        |
+|  7 | month         | object      |             10 |               0 |                    0 | No Missing Values        |
+|  8 | day_of_week   | object      |              5 |               0 |                    0 | No Missing Values        |
+|  9 | poutcome      | object      |              3 |               0 |                    0 | No Missing Values        |
+| 10 | y             | object      |              2 |               0 |                    0 | No Missing Values        |
+
+### outliers_summary
+
+
+=== Outliers Summary ===
+
+|   Index | Column         |   Outlier Count | Percentage   |
+|---------|----------------|-----------------|--------------|
+|       0 | age            |              39 | 0.95%        |
+|       1 | duration       |             291 | 7.06%        |
+|       2 | campaign       |             235 | 5.71%        |
+|       3 | pdays          |             160 | 3.88%        |
+|       4 | previous       |             596 | 14.47%       |
+|       5 | emp.var.rate   |               0 | 0.00%        |
+|       6 | cons.price.idx |               0 | 0.00%        |
+|       7 | cons.conf.idx  |              43 | 1.04%        |
+|       8 | euribor3m      |               0 | 0.00%        |
+|       9 | nr.employed    |               0 | 0.00%        |
+
+### summary_statistics_all
+
+Summary Statistics for All Numeric Columns:
+
+| Statistic                   |            age |     duration |    campaign |        pdays |    previous |   emp.var.rate |   cons.price.idx |   cons.conf.idx |   euribor3m |   nr.employed |
+|-----------------------------|----------------|--------------|-------------|--------------|-------------|----------------|------------------|-----------------|-------------|---------------|
+| Count                       | 4119           |  4119        | 4119        |  4119        | 4119        |   4119         |    4119          |  4119           | 4119        |  4119         |
+| Unique                      |   67           |   828        |   25        |    21        |    7        |     10         |      26          |    26           |  234        |    11         |
+| Mean                        |   40.1136      |   256.788    |    2.53727  |   960.422    |    0.190337 |      0.0849721 |      93.5797     |   -40.4991      |    3.62136  |  5166.48      |
+| Std                         |   10.3134      |   254.704    |    2.56816  |   191.923    |    0.541788 |      1.56311   |       0.579349   |     4.59458     |    1.73359  |    73.6679    |
+| Min                         |   18           |     0        |    1        |     0        |    0        |     -3.4       |      92.201      |   -50.8         |    0.635    |  4963.6       |
+| 25%                         |   32           |   103        |    1        |   999        |    0        |     -1.8       |      93.075      |   -42.7         |    1.334    |  5099.1       |
+| 50%                         |   38           |   181        |    2        |   999        |    0        |      1.1       |      93.749      |   -41.8         |    4.857    |  5191         |
+| 75%                         |   47           |   317        |    3        |   999        |    0        |      1.4       |      93.994      |   -36.4         |    4.961    |  5228.1       |
+| Max                         |   88           |  3643        |   35        |   999        |    6        |      1.4       |      94.767      |   -26.9         |    5.045    |  5228.1       |
+| Mode                        |   32           |    77        |    1        |   999        |    0        |      1.4       |      93.994      |   -36.4         |    4.857    |  5228.1       |
+| Range                       |   70           |  3643        |   34        |   999        |    6        |      4.8       |       2.566      |    23.9         |    4.41     |   264.5       |
+| IQR                         |   15           |   214        |    2        |     0        |    0        |      3.2       |       0.919      |     6.3         |    3.627    |   129         |
+| Variance                    |  106.365       | 64874        |    6.59544  | 36834.4      |    0.293535 |      2.44333   |       0.335645   |    21.1101      |    3.00534  |  5426.96      |
+| Skewness                    |    0.715694    |     3.29478  |    4.00318  |    -4.77514  |    4.02298  |     -0.727688  |      -0.216641   |     0.287309    |   -0.71508  |    -1.07588   |
+| Kurtosis                    |    0.43813     |    20.7619   |   25.2845   |    20.8125   |   22.1203   |     -1.04178   |      -0.823358   |    -0.314303    |   -1.39637  |     0.0617242 |
+| Shapiro-Wilk Test Statistic |    0.957852    |     0.723453 |    0.597448 |     0.189739 |    0.393909 |      0.765963  |       0.936089   |     0.925616    |    0.687435 |     0.784831  |
+| Shapiro-Wilk Test p-value   |    5.63095e-33 |     0        |    0        |     0        |    0        |      0         |       6.9919e-39 |     3.67406e-41 |    0        |     0         |
+
+### categorical_summary
+
+Categorical Summary:
+
+| Statistic      | job    | marital   | education         | default   | housing   | loan   | contact   | month   | day_of_week   | poutcome    | y      |
+|----------------|--------|-----------|-------------------|-----------|-----------|--------|-----------|---------|---------------|-------------|--------|
+| Count          | 4119   | 4119      | 4119              | 4119      | 4119      | 4119   | 4119      | 4119    | 4119          | 4119        | 4119   |
+| Unique         | 12     | 4         | 8                 | 3         | 3         | 3      | 2         | 10      | 5             | 3           | 2      |
+| Top            | admin. | married   | university.degree | no        | yes       | no     | cellular  | may     | thu           | nonexistent | no     |
+| Frequency      | 1012   | 2509      | 1264              | 3315      | 2175      | 3349   | 2652      | 1378    | 860           | 3523        | 3668   |
+| Top Percentage | 24.57% | 60.91%    | 30.69%            | 80.48%    | 52.80%    | 81.31% | 64.38%    | 33.45%  | 20.88%        | 85.53%      | 89.05% |
+

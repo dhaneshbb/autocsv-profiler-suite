@@ -1,0 +1,18 @@
+# Include core documentation and license
+include README.md
+include LICENSE
+
+# Include environment requirement files
+recursive-include env *.txt
+
+# Include Python source code
+recursive-include src *.py
+
+# Include CSVs, media, and other static assets
+recursive-include assets *.csv *.mp4 
+
+# Include example files
+recursive-include example *.html *.png *.jpg 
+
+# Include batch scripts
+recursive-include batch *.bat
