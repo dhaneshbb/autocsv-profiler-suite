@@ -1,7 +1,7 @@
 
 # AutoCSV Profiler Suite
 
-![Demo](assets/demo.gif)
+![Demo](assets/video.gif)
 
 **CSV Analysis with Isolated Environments**  
 
