@@ -3,7 +3,6 @@
 
 [![Watch the demo](assets/video-thumbnail.png)](https://drive.google.com/uc?export=preview&id=1tBFFC_X-lsBJ9PQv4aLpbkTUde1OCtfu)
 
-
 **CSV Analysis with Isolated Environments**  
 
 Automate exploratory data analysis (EDA) for CSV datasets using **Sweetviz**, **ydata-profiling**, and **DataPrep** without dependency conflicts.  
