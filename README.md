@@ -1,10 +1,7 @@
 
 # AutoCSV Profiler Suite
 
-<video width="640" height="360" controls>
-  <source src="https://drive.google.com/uc?export=preview&id=1tBFFC_X-lsBJ9PQv4aLpbkTUde1OCtfu" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+![Demo](assets/demo.gif)
 
 **CSV Analysis with Isolated Environments**  
 
