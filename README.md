@@ -212,10 +212,10 @@ Scripts to run: All (y for 1-5)
 
 ### 3. Locate Outputs
 ```plaintext
-📂 bank-additional/
-├── 📊 profiling_report.html         # ydata output
-├── 📈 sweetviz_report.html          # Sweetviz comparison
-└── 📁 visualization/                # 50+ analysis plots
+bank-additional/
+├── profiling_report.html         # ydata output
+├── sweetviz_report.html          # Sweetviz comparison
+└── visualization/                # 50+ analysis plots
 ```
 ---
 
