@@ -1,7 +1,9 @@
 
 # AutoCSV Profiler Suite
 
-![Demo](assets/demo.gif)
+![Demo](assets/video.gif)
+
+for more clear view watch [here](https://drive.google.com/file/d/1tBFFC_X-lsBJ9PQv4aLpbkTUde1OCtfu/view?usp=drive_link)
 
 **CSV Analysis with Isolated Environments**  
 
@@ -86,30 +88,30 @@ Automated exploratory data analysis (EDA) and validation for CSV datasets, ideal
 ## Directory Structure
 ```plaintext
 AutoCSV-Profiler-Suite/
-├── 📂 assets/                # Static resources (e.g., sample CSVs, images)
+├── assets/                # Static resources (e.g., sample CSVs, images)
 │   └── bank-additional.csv
-├── 📂 batch/                 # Batch orchestration files
+├── batch/                 # Batch orchestration files
 │   └── run_analysis.bat
-├── 📂 example/               # Sample outputs
-│   └── 📂 bank-additional/
-│       ├──  profiling_report.html
-│       ├──  sweetviz_report.html
-│       └── 📁 visualization/
-├── 📂 src/                   # Core analysis scripts
+├── example/               # Sample outputs
+│   └──  bank-additional/
+│       ├── profiling_report.html
+│       ├── sweetviz_report.html
+│       └── visualization/
+├── src/                   # Core analysis scripts
 │   ├── auto_csv_profiler.py
 │   ├── cerberus_validator_specific_columns.py
 │   ├── profile_*.py          # All profiling scripts
 │   └── recognize_delimiter.py
-├──	📂 env/
-│	├── 📂 ds_ml/
+├── env/
+│	├── ds_ml/
 │	│   └── requirements.txt
-│	├── 📂 sweetz_ydata_profiler/
+│	├── sweetz_ydata_profiler/
 │	│   └── requirements.txt
-│	└── 📂 dataprep/
+│	└── dataprep/
 │		└── requirements.txt
-├── 📜 MANIFEST.in            # Distribution manifest
-├── 📜 README.md              # Project documentation
-├── 📜 License             	  # MIT License
+├── MANIFEST.in            # Distribution manifest
+├── README.md              # Project documentation
+├── License             	# MIT License
 ```
 
 ---
@@ -118,8 +120,8 @@ AutoCSV-Profiler-Suite/
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/yourusername/autocsv-profiler-suite.git
-cd autocsv-profiler-suite
+git clone https://github.com/dhaneshbb/AutoCSV-Profiler-Suite.git
+cd AutoCSV-Profiler-Suite
 ```
 
 ### 2. Create Virtual Environments
@@ -212,10 +214,10 @@ Scripts to run: All (y for 1-5)
 
 ### 3. Locate Outputs
 ```plaintext
-📂 bank-additional/
-├── 📊 profiling_report.html         # ydata output
-├── 📈 sweetviz_report.html          # Sweetviz comparison
-└── 📁 visualization/                # 50+ analysis plots
+bank-additional/
+├── profiling_report.html         # ydata output
+├── sweetviz_report.html          # Sweetviz comparison
+└── visualization/                # 50+ analysis plots
 ```
 ---
 
