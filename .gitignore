@@ -275,10 +275,6 @@ config.json
 .env.production
 .env.development
 
-# Package-specific ignores
-package/
-release/
-
 # User Data Directories
 user_data/
 personal_data/
