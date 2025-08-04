@@ -1,5 +1,9 @@
 # AutoCSV Profiler Suite
 
+[![PyPI version](https://badge.fury.io/py/autocsv-profiler.svg)](https://badge.fury.io/py/autocsv-profiler)
+[![Python Support](https://img.shields.io/pypi/pyversions/autocsv-profiler.svg)](https://pypi.org/project/autocsv-profiler/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A comprehensive toolkit for automated CSV data analysis using multiple profiling engines. This suite provides statistical analysis, data quality assessment, and interactive reporting through conda-managed environments.
 
 ![Demo](./assets/video.gif)
@@ -302,5 +306,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Version
 
 Current version: 1.1.0
+
 
 For version history and changes, see [CHANGELOG.md](CHANGELOG.md).
