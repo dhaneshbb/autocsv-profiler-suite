@@ -275,10 +275,7 @@ graph TD
 ## Documentation
 
 ### For Source Distribution
-- [Installation Guide](docs/installation.md) - Full conda environment setup
-- [Usage Instructions](docs/usage.md) - Multi-tool workflow
-- [Environment Management](docs/environments.md) - Managing multiple environments
-- [Troubleshooting](docs/troubleshooting.md) - Common issues resolution
+- [Source Distribution](docs/Source%20Suite%20Guide.md) - Full conda environment setup
 
 ### For PyPI Package
 - Installation: `pip install autocsv-profiler`
@@ -309,3 +306,4 @@ Current version: 1.1.0
 
 
 For version history and changes, see [CHANGELOG.md](CHANGELOG.md).
+
