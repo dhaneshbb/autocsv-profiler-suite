@@ -231,7 +231,6 @@ distinct_values_count_by_dtype.html
 *.jpg
 *.jpeg
 *.pdf
-*.svg
 !docs/*.png
 !docs/*.jpg
 !docs/*.svg
