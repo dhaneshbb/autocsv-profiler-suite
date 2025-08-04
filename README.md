@@ -275,7 +275,7 @@ graph TD
 ## Documentation
 
 ### For Source Distribution
-- [Source Distribution](docs/Source%20Suite%20Guide.md) - Full conda environment setup
+- [Source Distribution](docs/Source%20Suite%20Guide.md) - Full setup
 
 ### For PyPI Package
 - Installation: `pip install autocsv-profiler`
@@ -297,7 +297,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Support
 
 - Create an [issue](https://github.com/dhaneshbb/AutoCSV-Profiler-Suite/issues) for bug reports
-- Check [troubleshooting guide](docs/troubleshooting.md) for common problems
+- Check [troubleshooting guide](docs/docs/Source%20Suite%20Guide.md) for common problems
 - Review [changelog](CHANGELOG.md) for recent updates
 
 ## Version
@@ -306,4 +306,5 @@ Current version: 1.1.0
 
 
 For version history and changes, see [CHANGELOG.md](CHANGELOG.md).
+
 
