@@ -1,0 +1,31 @@
+# Include documentation
+include README.md
+include LICENSE
+include CHANGELOG.md
+
+# Include environment files
+recursive-include environments *.yml
+
+# Include scripts
+recursive-include scripts *.ps1
+include run_analysis.bat
+
+# Include documentation
+recursive-include docs *.md
+
+# Include GitHub configuration
+recursive-include .github *.yml *.md
+
+# Include examples
+recursive-include examples *.csv
+
+# Include assets
+recursive-include .gif *.svg
+
+# Exclude development and build artifacts
+global-exclude *.pyc
+global-exclude __pycache__
+global-exclude .git*
+global-exclude *.egg-info
+global-exclude build
+global-exclude dist

@@ -1,0 +1,13 @@
+name: csv-profiler-profiling
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10.4
+  - pandas>=1.4.0,<2.0.0
+  - numpy>=1.21.0,<1.25.0
+  - matplotlib>=3.5.0,<3.7.0
+  - pip
+  - pip:
+    - ydata-profiling>=4.0.0
+    - sweetviz>=2.1.4
