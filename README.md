@@ -6,7 +6,7 @@
 
 A comprehensive toolkit for automated CSV data analysis using multiple profiling engines. This suite provides statistical analysis, data quality assessment, and interactive reporting through conda-managed environments.
 
-![Demo](/assets/video.gif)
+![Demo](./assets/video.gif)
 
 ## Project Structure
 
@@ -306,6 +306,7 @@ Current version: 1.1.0
 
 
 For version history and changes, see [CHANGELOG.md](CHANGELOG.md).
+
 
 
 
