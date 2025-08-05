@@ -17,7 +17,13 @@ This comprehensive guide covers all aspects of using AutoCSV Profiler for data a
 
 ## Quick Start
 
+```bash
+pip install autocsv-profiler
+autocsv-profiler data.csv
+```
+
 ### Command Line Usage
+
 ```bash
 # Basic analysis
 autocsv-profiler data.csv
@@ -2605,4 +2611,5 @@ if __name__ == '__main__':
 This API reference provides comprehensive documentation for integrating AutoCSV Profiler into various Python applications and workflows.
 
 ---
+
 
