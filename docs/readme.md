@@ -22,11 +22,11 @@ autocsv-profiler data.csv --output ./results
 ```
 
 **Documentation:**
-- [PyPI Package Docs](docs/PyPI%20Package%20Docs.md)
-  - [Installation](docs/PyPI%20Package%20Docs.md#installation)
-  - [Usage](docs/PyPI%20Package%20Docs.md#usage)
-  - [API Reference](docs/PyPI%20Package%20Docs.md#api-reference)
-  - [Troubleshooting](docs/PyPI%20Package%20Docs.md#troubleshooting)
+- [PyPI Package Docs](docs/PyPI-Package-Docs.md)
+  - [Installation](docs/PyPI-Package-Docs.md#installation)
+  - [Usage](docs/PyPI-Package-Docs.md#usage)
+  - [API Reference](docs/PyPI-Package-Docs.md#api-reference)
+  - [Troubleshooting](docs/PyPI-Package-Docs.md#troubleshooting)
 
 ### Source Version (Full Suite)
 
@@ -40,11 +40,11 @@ run_analysis.bat
 - Outputs full HTML and stats reports
 
 **Documentation:**
-- [Source Suite Guide](docs/Source%20Suite%20Guide.md)
-  - [Installation](docs/Source%20Suite%20Guide.md#installation)
-  - [Usage](docs/Source%20Suite%20Guide.md#usage)
-  - [Environments](docs/Source%20Suite%20Guide.md#environments)
-  - [Troubleshooting](docs/Source%20Suite%20Guide.md#troubleshooting)
+- [Source Suite Guide](docs/Source-Suite-Guide.md)
+  - [Installation](docs/Source-Suite-Guide.md#installation)
+  - [Usage](docs/Source-Suite-Guide.md#usage)
+  - [Environments](docs/Source-Suite-Guide.md#environments)
+  - [Troubleshooting](docs/Source-Suite-Guide.md#troubleshooting)
 
 ---
 
