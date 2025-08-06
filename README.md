@@ -57,6 +57,13 @@ autocsv-profiler data.csv
 - **Command-line interface** for quick analysis  
 - **Automatic dependency management**
 
+**Documentation:**
+- [PyPI Package Docs](docs/PyPI-Package-Docs.md)
+  - [Installation](docs/PyPI-Package-Docs.md#installation)
+  - [Usage](docs/PyPI-Package-Docs.md#usage)
+  - [API Reference](docs/PyPI-Package-Docs.md#api-reference)
+  - [Troubleshooting](docs/PyPI-Package-Docs.md#troubleshooting)
+
 ### 📦 **Source Distribution** (Full Suite)
 ```bash
 git clone https://github.com/dhaneshbb/AutoCSV-Profiler-Suite.git
@@ -66,6 +73,13 @@ run_analysis.bat
 - **Three specialized environments** for different tools
 - **Multiple profiling engines** (YData, SweetViz, DataPrep)
 - **Interactive tool selection interface**
+
+**Documentation:**
+- [Source Suite Guide](docs/Source-Suite-Guide.md)
+  - [Installation](docs/Source-Suite-Guide.md#installation)
+  - [Usage](docs/Source-Suite-Guide.md#usage)
+  - [Environments](docs/Source-Suite-Guide.md#environments)
+  - [Troubleshooting](docs/Source-Suite-Guide.md#troubleshooting)
 
 ## Features
 
@@ -306,6 +320,7 @@ Current version: 1.1.0
 
 
 For version history and changes, see [CHANGELOG.md](CHANGELOG.md).
+
 
 
 
