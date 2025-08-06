@@ -35,12 +35,25 @@ run_analysis.bat
 
 ## Documentation
 
-* [Source Suite Guide](docs/Source%20Suite%20Guide.md)
-* [PyPI Package Docs](docs/PyPI%20Package%20Docs.md)
+## Documentation
+
+- [Source Suite Guide](docs/Source%20Suite%20Guide.md)  
+  - [Usage](docs/Source%20Suite%20Guide.md#usage)
+  - [Installation](docs/Source%20Suite%20Guide.md#installation)
+  - [Troubleshooting](docs/Source%20Suite%20Guide.md#troubleshooting)
+  - [Environments](docs/Source%20Suite%20Guide.md#environments)
+
+- [PyPI Package Docs](docs/PyPI%20Package%20Docs.md)
+  - [Usage](docs/PyPI%20Package%20Docs.md#usage)
+  - [Installation](docs/PyPI%20Package%20Docs.md#installation)
+  - [Troubleshooting](docs/PyPI%20Package%20Docs.md#troubleshooting)
+  - [API Reference](docs/PyPI%20Package%20Docs.md#api-reference)
+
 
 ---
 
 > Developed by [@dhaneshbb](https://github.com/dhaneshbb) · v1.1.0
+
 
 
 
