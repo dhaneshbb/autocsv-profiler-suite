@@ -15,7 +15,7 @@
 
 ## Usage Guide
 
-### PyPI Version (Command-line)
+### 🐍 PyPI Version (Command-line)
 
 ```bash
 autocsv-profiler data.csv --output ./results
@@ -28,7 +28,7 @@ autocsv-profiler data.csv --output ./results
   - [API Reference](./PyPI-Package-Docs.md#api-reference)
   - [Troubleshooting](./PyPI-Package-Docs.md#troubleshooting)
 
-### Source Version (Full Suite)
+### 📦 Source Version (Full Suite)
 
 ```cmd
 run_analysis.bat
@@ -49,5 +49,6 @@ run_analysis.bat
 ---
 
 > Developed by [@dhaneshbb](https://github.com/dhaneshbb) · v1.1.0
+
 
 
