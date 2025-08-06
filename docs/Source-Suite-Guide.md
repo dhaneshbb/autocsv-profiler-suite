@@ -454,15 +454,15 @@ graph LR
     B --> C[Open in Text Editor]
     C --> D{Identify Delimiter}
     
-    D --> E[Comma ,]
-    D --> F[Semicolon ;]
-    D --> G[Tab \t]
-    D --> H[Pipe |]
+    D --> E[Comma]
+    D --> F[Semicolon]
+    D --> G[Tab]
+    D --> H[Pipe]
     
-    E --> I[Enter: ,]
-    F --> I[Enter: ;]
-    G --> I[Enter: \t]
-    H --> I[Enter: |]
+    E --> I[Enter comma]
+    F --> J[Enter semicolon]
+    G --> K[Enter tab]
+    H --> L[Enter pipe]
 ```
 
 **Manual delimiter identification**:
@@ -1187,4 +1187,5 @@ conda create --name csv-profiler-main-backup --clone csv-profiler-main
 This environment management system ensures reliable, reproducible, and efficient data analysis workflows.
 
 ---
+
 
