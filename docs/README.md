@@ -22,7 +22,7 @@ autocsv-profiler data.csv --output ./results
 ```
 
 **Documentation:**
-- [PyPI Package Docs](docs/docs/PyPI-Package-Docs.md)
+- [PyPI Package Docs](./PyPI-Package-Docs.md)
   - [Installation](docs/docs/PyPI-Package-Docs.md#installation)
   - [Usage](docs/docs/PyPI-Package-Docs.md#usage)
   - [API Reference](docs/docs/PyPI-Package-Docs.md#api-reference)
@@ -49,3 +49,4 @@ run_analysis.bat
 ---
 
 > Developed by [@dhaneshbb](https://github.com/dhaneshbb) · v1.1.0
+
