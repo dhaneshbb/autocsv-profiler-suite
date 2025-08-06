@@ -23,10 +23,10 @@ autocsv-profiler data.csv --output ./results
 
 **Documentation:**
 - [PyPI Package Docs](./PyPI-Package-Docs.md)
-  - [Installation](docs/docs/PyPI-Package-Docs.md#installation)
-  - [Usage](docs/docs/PyPI-Package-Docs.md#usage)
-  - [API Reference](docs/docs/PyPI-Package-Docs.md#api-reference)
-  - [Troubleshooting](docs/docs/PyPI-Package-Docs.md#troubleshooting)
+  - [Installation](./PyPI-Package-Docs.md#installation)
+  - [Usage](./PyPI-Package-Docs.md#usage)
+  - [API Reference](./PyPI-Package-Docs.md#api-reference)
+  - [Troubleshooting](./PyPI-Package-Docs.md#troubleshooting)
 
 ### Source Version (Full Suite)
 
@@ -40,13 +40,14 @@ run_analysis.bat
 - Outputs full HTML and stats reports
 
 **Documentation:**
-- [Source Suite Guide](docs/docs/Source-Suite-Guide.md)
-  - [Installation](docs/docs/Source-Suite-Guide.md#installation)
-  - [Usage](docs/docs/Source-Suite-Guide.md#usage)
-  - [Environments](docs/docs/Source-Suite-Guide.md#environments)
-  - [Troubleshooting](docs/docs/Source-Suite-Guide.md#troubleshooting)
+- [Source Suite Guide](./Source-Suite-Guide.md)
+  - [Installation](./Source-Suite-Guide.md#installation)
+  - [Usage](./Source-Suite-Guide.md#usage)
+  - [Environments](./Source-Suite-Guide.md#environments)
+  - [Troubleshooting](./Source-Suite-Guide.md#troubleshooting)
 
 ---
 
 > Developed by [@dhaneshbb](https://github.com/dhaneshbb) · v1.1.0
+
 
