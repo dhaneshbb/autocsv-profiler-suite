@@ -51,28 +51,6 @@ delimiter = detect_delimiter("data.csv")
 print(f"Detected delimiter: {delimiter}")
 ```
 
-## Analysis Workflow
-
-```mermaid
-graph LR
-    A[CSV File] --> B[AutoCSV Profiler]
-    B --> C[Data Loading & Validation]
-    C --> D[Statistical Analysis]
-    C --> E[Quality Assessment]
-    C --> F[Visualization Generation]
-    
-    D --> G[Output Reports]
-    E --> G
-    F --> G
-    
-    G --> H[HTML Dashboard]
-    G --> I[Statistical Summaries]
-    G --> J[Data Insights]
-    
-    style B fill:#e8f5e8
-    style G fill:#e3f2fd
-```
-
 ## Generated Outputs
 
 ### Statistical Reports
@@ -221,5 +199,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Version
 
 Current version: 1.1.0
+
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and updates.
