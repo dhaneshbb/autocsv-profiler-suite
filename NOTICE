@@ -61,5 +61,4 @@ DataPrep Environment (csv-profiler-dataprep):
 To review actual installed dependency licensing information, activate an environment and run:
 conda list --show-channel-urls
 
-Last Updated: January 2025
 Contact: dhaneshbb5@gmail.com
