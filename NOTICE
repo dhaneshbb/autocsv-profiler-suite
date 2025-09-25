@@ -1,0 +1,65 @@
+autocsv-profiler-suite
+Copyright (c) 2025 dhaneshbb
+
+DISTRIBUTION SCOPE:
+This project distributes only:
+- Python source code (MIT License)
+- Conda environment specifications (configuration files)
+- Documentation and setup scripts
+
+NOT DISTRIBUTED:
+- No conda packages or dependencies
+- No compiled binaries or libraries
+- No third-party software components
+
+THIRD-PARTY TOOLS REFERENCED:
+This project provides configuration files that may reference external open-source libraries.
+These libraries remain under their original licenses and are not distributed with this project:
+
+Core Libraries:
+- pandas=2.3.1/1.5.3 (BSD-3-Clause)
+- numpy=2.2.6 (BSD-3-Clause)
+- scipy=1.13.1 (BSD-3-Clause)
+- matplotlib-base (PSF)
+- seaborn=0.13.2 (BSD-3-Clause)
+- scikit-learn>=1.2.0 (BSD-3-Clause)
+- statsmodels>=0.13.0 (BSD-3-Clause)
+
+Analysis Tools:
+- ydata-profiling=4.16.1 (MIT)
+- sweetviz=2.3.1 (MIT)
+- dataprep=0.4.5 (MIT)
+
+Utility Libraries:
+- tqdm=4.67.1 (MPL-2.0 OR MIT)
+- tableone=0.9.5 (MIT)
+- missingno>=0.5.2 (MIT)
+- tabulate=0.9.0 (MIT)
+- researchpy=0.3.6 (BSD-3-Clause)
+
+USER RESPONSIBILITY:
+Users are responsible for installing conda environments and ensuring
+license compliance of all installed packages. Some dependencies may be
+licensed under GPL, LGPL, MPL, or other terms that impose obligations
+separate from this project's MIT license.
+
+CURRENT ENVIRONMENT SPECIFICATIONS:
+As of version 1.1.0, this project references the following dependency versions:
+
+Main Environment (csv-profiler-main):
+- Python 3.11.7
+- Core libraries with version constraints as specified in environments/environment-main.yml
+
+Profiling Environment (csv-profiler-profiling):
+- Python 3.10.4
+- Specialized tools with strict version constraints in environments/environment-profiling.yml
+
+DataPrep Environment (csv-profiler-dataprep):
+- Python 3.10.4
+- DataPrep toolkit as specified in environments/environment-dataprep.yml
+
+To review actual installed dependency licensing information, activate an environment and run:
+conda list --show-channel-urls
+
+Last Updated: January 2025
+Contact: dhaneshbb5@gmail.com

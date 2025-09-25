@@ -1,4 +1,4 @@
-# AutoCSV Profiler Suite Documentation
+# autocsv-profiler-suite Documentation
 
 ## Table of Contents
 
@@ -13,9 +13,9 @@
 
 # Usage Guide - Source Distribution
 
-This guide explains how to use AutoCSV Profiler Suite **source distribution** for comprehensive CSV data analysis with multiple profiling engines.
+This guide explains how to use autocsv-profiler-suite for CSV data analysis with multiple profiling engines.
 
-> **Note**: For PyPI package usage, use: `autocsv-profiler data.csv --help`  
+  
 > This guide covers the full multi-environment source distribution workflow.
 
 ## Quick Start
@@ -52,7 +52,7 @@ graph TD
 Ensure your CSV file meets these requirements:
 - Valid CSV format with consistent delimiters
 - First row contains column headers
-- File size under 500MB for optimal performance
+- File size under 500MB for better performance
 - Accessible file path without special characters
 
 ### Step 2: Run the Analysis
@@ -64,7 +64,7 @@ run_analysis.bat
 
 ### Step 3: Provide CSV File Path
 
-When prompted, enter the complete path to your CSV file:
+When prompted, enter the full path to your CSV file:
 ```
 Enter the full path to the CSV file: C:\data\your_file.csv
 ```
@@ -210,7 +210,7 @@ python src/auto_csv_profiler.py "path/to/file.csv" "output/directory/"
 
 ### Customizing Analysis
 
-The comprehensive analysis tool (`auto_csv_profiler.py`) provides interactive options:
+The analysis tool (`auto_csv_profiler.py`) provides interactive options:
 
 1. **Missing Value Handling**
    - Convert specific values to NaN
@@ -279,7 +279,7 @@ sequenceDiagram
         Tools->>Output: Generate EDA report
     end
     
-    Output->>User: Analysis complete notification
+    Output->>User: Analysis finished notification
 ```
 
 ## Best Practices
@@ -332,7 +332,7 @@ For troubleshooting common issues, see the [troubleshooting guide](troubleshooti
 
 # Troubleshooting Guide
 
-This guide helps resolve common issues encountered when using AutoCSV Profiler Suite.
+This guide helps resolve common issues encountered when using autocsv-profiler-suite.
 
 ## Environment Issues
 
@@ -352,7 +352,7 @@ This guide helps resolve common issues encountered when using AutoCSV Profiler S
 **Alternative**: Run from Anaconda Prompt:
 ```bash
 # Navigate to project directory in Anaconda Prompt
-cd C:\path\to\AutoCSV-Profiler-Suite
+cd C:\path\to\autocsv-profiler-suite
 .\scripts\setup_environments.ps1
 ```
 
@@ -698,7 +698,7 @@ Include the following in your GitHub issue:
 
 ### Community Resources
 
-- **GitHub Issues**: [Report bugs and request features](https://github.com/dhaneshbb/AutoCSV-Profiler-Suite/issues)
+- **GitHub Issues**: [Report bugs and request features](https://github.com/dhaneshbb/autocsv-profiler-suite/issues)
 - **Documentation**: Refer to installation and usage guides
 - **Changelog**: Check recent changes for known issues
 
@@ -718,19 +718,9 @@ Remember: Most issues are environment-related and can be resolved by recreating 
 
 # Installation Guide - Source Distribution
 
-This guide covers the complete installation process for AutoCSV Profiler Suite **source distribution** on Windows systems. 
+This guide covers the complete installation process for autocsv-profiler-suite on Windows systems.
 
-> **Note**: For the simplified PyPI package, use: `pip install autocsv-profiler`  
-> This guide is for users who want the full multi-environment setup with all profiling tools.
-
-## Distribution Comparison
-
-| Method | Installation | Features |
-|--------|-------------|----------|
-| **PyPI Package** | `pip install autocsv-profiler` | Core analysis, single environment |
-| **Source Distribution** | Download + conda setup | Full suite, multiple tools, three environments |
-
-**Continue with this guide for Source Distribution setup.**
+This comprehensive toolkit uses three specialized conda environments to provide the complete suite of analysis tools with maximum compatibility and functionality.
 
 ## Prerequisites
 
@@ -778,16 +768,16 @@ You should see output similar to:
 conda 25.5.1
 ```
 
-## Step 2: Download AutoCSV Profiler Suite
+## Step 2: Download autocsv-profiler-suite
 
 ### Option 1: Git Clone (Recommended)
 ```bash
-git clone https://github.com/dhaneshbb/AutoCSV-Profiler-Suite.git
-cd AutoCSV-Profiler-Suite
+git clone https://github.com/dhaneshbb/autocsv-profiler-suite.git
+cd autocsv-profiler-suite
 ```
 
 ### Option 2: Download ZIP
-1. Go to [https://github.com/dhaneshbb/AutoCSV-Profiler-Suite](https://github.com/dhaneshbb/AutoCSV-Profiler-Suite)
+1. Go to [https://github.com/dhaneshbb/autocsv-profiler-suite](https://github.com/dhaneshbb/autocsv-profiler-suite)
 2. Click "Code" → "Download ZIP"
 3. Extract the ZIP file to your desired location
 4. Open Command Prompt in the extracted folder
@@ -896,7 +886,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 If you encounter issues:
 1. Check the [troubleshooting guide](troubleshooting.md)
 2. Review error messages in the console output
-3. Create an issue on [GitHub](https://github.com/dhaneshbb/AutoCSV-Profiler-Suite/issues)
+3. Create an issue on [GitHub](https://github.com/dhaneshbb/autocsv-profiler-suite/issues)
 
 ## Next Steps
 
@@ -905,7 +895,7 @@ After successful installation:
 2. Try the analysis with your own CSV files
 3. Explore the different profiling tools available
 
-Your AutoCSV Profiler Suite is now ready for use!
+Your autocsv-profiler-suite is now ready for use!
 
 ---
 
@@ -913,13 +903,13 @@ Your AutoCSV Profiler Suite is now ready for use!
 
 # Environment Management
 
-AutoCSV Profiler Suite uses three specialized conda environments to ensure compatibility and optimal performance across different analysis tools.
+autocsv-profiler-suite uses three specialized conda environments to ensure compatibility and optimal performance across different analysis tools.
 
 ## Environment Architecture
 
 ```mermaid
 graph TD
-    A[AutoCSV Profiler Suite] --> B[csv-profiler-main]
+    A[autocsv-profiler-suite] --> B[csv-profiler-main]
     A --> C[csv-profiler-profiling] 
     A --> D[csv-profiler-dataprep]
     
@@ -1185,6 +1175,23 @@ conda create --name csv-profiler-main-backup --clone csv-profiler-main
 ```
 
 This environment management system ensures reliable, reproducible, and efficient data analysis workflows.
+
+---
+
+## License & Disclaimers
+
+**Software License:** MIT License - Copyright (c) 2025 dhaneshbb
+
+**Important Disclaimers:**
+- This software is provided "AS IS" without warranty of any kind
+- Users are responsible for installing and maintaining conda environments
+- Users must ensure license compliance of all installed dependencies
+- Data accuracy and analysis interpretation are user responsibilities
+- The software does not guarantee data security or backup
+
+**Third-Party Dependencies:** This project references but does not distribute third-party libraries. Users installing conda environments accept responsibility for compliance with all dependency licenses, which may include GPL, LGPL, BSD, MIT, and other terms.
+
+For complete licensing information, see the [LICENSE](../LICENSE) and [NOTICE](../NOTICE) files in the project root.
 
 ---
 

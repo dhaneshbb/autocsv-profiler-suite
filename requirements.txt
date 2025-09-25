@@ -1,0 +1,5 @@
+# autocsv-profiler-suite - Base Requirements
+# Base dependencies for the default environment that manages isolated conda environments
+
+# Core data processing
+pandas==2.3.1

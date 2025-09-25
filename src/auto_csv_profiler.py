@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+"""
+autocsv-profiler-suite - Core Analysis Engine
+Licensed under the MIT License. See LICENSE file for details.
+"""
+
 import warnings
 warnings.filterwarnings("ignore", category=FutureWarning)
 warnings.filterwarnings("ignore", category=UserWarning, message=".*FixedLocator.*")
@@ -100,9 +106,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import missingno as msno
 
-# Data preprocessing and validation
+# Data preprocessing
 from sklearn.impute import SimpleImputer
-from cerberus import Validator
 
 # Hierarchical clustering
 from scipy.cluster.hierarchy import linkage, leaves_list
@@ -123,20 +128,6 @@ import importlib.util
 
 #########################################################################################
 
-def check_and_install_packages(packages):
-    """
-    Check if required packages are installed, and install them if they are missing.
-    """
-    import subprocess
-    log_info("Checking required packages...")
-    for package in packages:
-        try:
-            __import__(package)
-            log_success(f"{package} is already installed")
-        except ImportError:
-            log_warning(f"{package} is not installed. Installing now...")
-            subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-            log_success(f"{package} installed successfully")
 
 ########################################################################################
 
@@ -2458,19 +2449,13 @@ def main(file_path, save_dir):
     13. Handle any errors gracefully
     """
 
-    # Updated required packages based on the provided imports
-    required_packages = [
-        'pandas', 'numpy', 'scipy', 'statsmodels', 'seaborn', 'matplotlib', 'missingno', 
-        'tableone', 'researchpy', 'cerberus', 'tqdm', 'tabulate', 'sklearn'
-    ]
 
     # Clear console and start
     clear_console()
     log_header("AUTOMATED CSV DATA ANALYSIS TOOL")
 
-    # Step 1: Check and install packages
-    log_step(1, "Checking and installing required packages")
-    check_and_install_packages(required_packages)
+    # Step 1: Initialize analysis
+    log_step(1, "Initializing CSV analysis")
 
     try:
         # Step 2: Detect the delimiter

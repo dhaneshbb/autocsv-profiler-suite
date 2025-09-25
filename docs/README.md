@@ -1,49 +1,29 @@
-# AutoCSV Profiler Suite
+# autocsv-profiler-suite
 
-**One-click CSV data profiling with powerful EDA tools for analysts, scientists, and developers.**
-
----
-
-## Quick Start Options
-
-| Install Method | Description | Command |
-|----------------|-------------|---------|
-| **PyPI (Simple)** | Single-environment CLI + API usage | `pip install autocsv-profiler` |
-| **Source (Advanced)** | Multi-environment setup for all tools | Clone this repo & run `run_analysis.bat` |
+**Multi-environment CSV data profiling toolkit with EDA tools for analysis.**
 
 ---
 
-## Usage Guide
-
-### 🐍 PyPI Version (Command-line)
+## Installation & Usage
 
 ```bash
-autocsv-profiler data.csv --output ./results
-```
-
-**Documentation:**
-- [PyPI Package Docs](./PyPI-Package-Docs.md)
-  - [Installation](./PyPI-Package-Docs.md#installation)
-  - [Usage](./PyPI-Package-Docs.md#usage)
-  - [API Reference](./PyPI-Package-Docs.md#api-reference)
-  - [Troubleshooting](./PyPI-Package-Docs.md#troubleshooting)
-
-### 📦 Source Version (Full Suite)
-
-```cmd
+git clone https://github.com/dhaneshbb/autocsv-profiler-suite.git
+cd autocsv-profiler-suite
+.\scripts\setup_environments.ps1
 run_analysis.bat
 ```
 
 **Features:**
-- Auto-detects delimiter
-- Lets you choose tools (YData, SweetViz, etc.)
-- Outputs full HTML and stats reports
+- Three conda environments for compatibility
+- Multiple profiling engines (YData, SweetViz, DataPrep)
+- Interactive tool selection interface
+- Comprehensive HTML reports and statistical analysis
 
 **Documentation:**
-- [Source Suite Guide](./Source-Suite-Guide.md)
+- [Complete Guide](./Source-Suite-Guide.md)
   - [Installation](./Source-Suite-Guide.md#installation)
   - [Usage](./Source-Suite-Guide.md#usage)
-  - [Environments](./Source-Suite-Guide.md#environments)
+  - [Environment Management](./Source-Suite-Guide.md#environments)
   - [Troubleshooting](./Source-Suite-Guide.md#troubleshooting)
 
 ---

@@ -1,98 +1,44 @@
-# AutoCSV Profiler Suite
+# autocsv-profiler-suite
 
-[![PyPI version](https://badge.fury.io/py/autocsv-profiler.svg)](https://badge.fury.io/py/autocsv-profiler)
-[![Python Support](https://img.shields.io/pypi/pyversions/autocsv-profiler.svg)](https://pypi.org/project/autocsv-profiler/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python Support](https://img.shields.io/badge/python-3.10%20%7C%203.11-blue)](https://www.python.org/downloads/)
+[![Conda](https://img.shields.io/badge/conda-required-green)](https://docs.conda.io/en/latest/miniconda.html)
 
-A comprehensive toolkit for automated CSV data analysis using multiple profiling engines. This suite provides statistical analysis, data quality assessment, and interactive reporting through conda-managed environments.
+A multi-environment toolkit for automated CSV data analysis using profiling engines. This suite provides statistical analysis, data quality assessment, and interactive reporting through three conda environments for different analysis tools.
 
-![Demo](./assets/video.gif)
+![Demo](./docs/assets/video.gif)
 
-## Project Structure
-
-```
-AutoCSV-Profiler-Suite/
-├── README.md
-├── LICENSE
-├── CHANGELOG.md
-├── SECURITY.md
-├── .gitignore
-├── run_analysis.bat
-│
-├── src/
-│   ├── auto_csv_profiler.py
-│   ├── profile_ydata_profiling_report.py
-│   ├── profile_sweetviz_report.py
-│   ├── profile_dataprep_report.py
-│   └── recognize_delimiter.py
-│
-├── environments/
-│   ├── environment-main.yml
-│   ├── environment-profiling.yml
-│   └── environment-dataprep.yml
-│
-├── scripts/
-│   └── setup_environments.ps1
-│
-├── docs/
-│   ├── installation.md
-│   ├── usage.md
-│   ├── environments.md
-│   └── troubleshooting.md
-│
-└── examples/
-    └── sample_data.csv
-```
-
-## Distribution Methods
-
-This project is available in two formats to suit different user needs:
-
-### 🐍 **PyPI Package** (Simplified)
+## Installation & Usage
 ```bash
-pip install autocsv-profiler
-autocsv-profiler data.csv
-```
-- **Single environment** with core analysis features
-- **Command-line interface** for quick analysis  
-- **Automatic dependency management**
-
-**Documentation:**
-- [PyPI Package Docs](docs/PyPI-Package-Docs.md)
-  - [Installation](docs/PyPI-Package-Docs.md#installation)
-  - [Usage](docs/PyPI-Package-Docs.md#usage)
-  - [API Reference](docs/PyPI-Package-Docs.md#api-reference)
-  - [Troubleshooting](docs/PyPI-Package-Docs.md#troubleshooting)
-
-### 📦 **Source Distribution** (Full Suite)
-```bash
-git clone https://github.com/dhaneshbb/AutoCSV-Profiler-Suite.git
+git clone https://github.com/dhaneshbb/autocsv-profiler-suite.git
+cd autocsv-profiler-suite
 .\scripts\setup_environments.ps1
 run_analysis.bat
 ```
-- **Three specialized environments** for different tools
+
+**Key Features:**
+- **Three conda environments** for tool compatibility
 - **Multiple profiling engines** (YData, SweetViz, DataPrep)
 - **Interactive tool selection interface**
+- **Complete analysis workflow**
 
 **Documentation:**
-- [Source Suite Guide](docs/Source-Suite-Guide.md)
-  - [Installation](docs/Source-Suite-Guide.md#installation)
-  - [Usage](docs/Source-Suite-Guide.md#usage)
-  - [Environments](docs/Source-Suite-Guide.md#environments)
-  - [Troubleshooting](docs/Source-Suite-Guide.md#troubleshooting)
+- [Installation Guide](docs/Source-Suite-Guide.md#installation)
+- [Usage Guide](docs/Source-Suite-Guide.md#usage)
+- [Environment Management](docs/Source-Suite-Guide.md#environments)
+- [Troubleshooting](docs/Source-Suite-Guide.md#troubleshooting)
 
 ## Features
 
-- **Multiple Profiling Engines**: YData Profiling, SweetViz, and DataPrep (source distribution)
-- **Comprehensive Analysis**: Statistical summaries, outlier detection, missing value analysis
-- **Interactive Reports**: HTML reports with visualizations and data insights
-- **Environment Management**: Single or multiple conda environments
-- **Flexible Installation**: Choose between simple pip install or full toolkit setup
-- **Cross-Platform Support**: Works on Windows with PowerShell and batch scripts
+- **Multiple Profiling Engines**: YData Profiling, SweetViz, and DataPrep with separate conda environments
+- **Statistical Analysis**: Statistical summaries, outlier detection, missing value analysis, VIF calculation
+- **Report Generation**: HTML reports with visualizations and data insights
+- **Multi-Environment Setup**: Three conda environments for tool compatibility
+- **Environment Management**: PowerShell scripts for conda environment setup and maintenance
+- **Windows Support**: Batch scripts and PowerShell integration
+- **Conda-Only Dependencies**: Package management through conda channels
 
 ## Project Architecture
-
-### Source Distribution (Full Suite)
 ```mermaid
 graph TB
     A[CSV Input File] --> B[run_analysis.bat]
@@ -119,21 +65,8 @@ graph TB
     L --> P[Cleaned Data]
 ```
 
-### PyPI Package (Simplified)
-```mermaid
-graph TB
-    A[CSV Input File] --> B[autocsv-profiler CLI]
-    B --> C[Single Environment<br/>Python 3.11+]
-    C --> D[Core Analysis Engine]
-    D --> E[Output Directory]
-    E --> F[Statistical Reports]
-    E --> G[Visualizations]
-    E --> H[Data Quality Reports]
-```
 
 ## Environment Structure
-
-### Source Distribution (Multiple Environments)
 ```mermaid
 graph LR
     A[setup_environments.ps1] --> B[csv-profiler-main]
@@ -149,72 +82,31 @@ graph LR
     style D fill:#e8f5e8
 ```
 
-### PyPI Package (Single Environment)
-```mermaid
-graph LR
-    A[pip install] --> B[autocsv-profiler]
-    B --> C[Unified Environment<br/>All core packages<br/>pandas, numpy, scipy<br/>matplotlib, seaborn, etc.]
-    
-    style B fill:#e1f5fe
-    style C fill:#f3e5f5
-```
 
 ## Quick Start
 
 ### Prerequisites
 
-- Windows OS with PowerShell (for source distribution)
-- Python 3.9+ (for PyPI package)
-- Anaconda or Miniconda (for source distribution)
+- Windows OS with PowerShell
+- Anaconda or Miniconda installed
 - Internet connection for package downloads
+- At least 4GB RAM (recommended)
+- 3GB free disk space for environments
 
-### Installation Options
+### Installation
 
-#### Option 1: PyPI Package (Recommended for Most Users)
-```bash
-# Simple installation
-pip install autocsv-profiler
-
-# Quick analysis
-autocsv-profiler your_data.csv
-```
-
-#### Option 2: Source Distribution (Full Feature Set)
 ```bash
 # Clone repository
-git clone https://github.com/dhaneshbb/AutoCSV-Profiler-Suite.git
-cd AutoCSV-Profiler-Suite
+git clone https://github.com/dhaneshbb/autocsv-profiler-suite.git
+cd autocsv-profiler-suite
 
-# Setup environments
+# Setup all three conda environments
 .\scripts\setup_environments.ps1
 
 # Run analysis
 run_analysis.bat
 ```
 
-## Usage Comparison
-
-| Feature | PyPI Package | Source Distribution |
-|---------|-------------|-------------------|
-| **Installation** | `pip install` | Download + conda setup |
-| **Setup Time** | 30 seconds | 10 minutes |
-| **Environments** | 1 (unified) | 3 (specialized) |
-| **Analysis Tools** | Core statistical analysis | Core + YData + SweetViz + DataPrep |
-| **Interface** | Command-line | Interactive batch menu |
-| **Updates** | `pip install -U` | Git pull + environment update |
-| **Target Users** | Developers, quick analysis | Data analysts, comprehensive reports |
-
-### Choose PyPI Package If:
-- You want quick, straightforward CSV analysis
-- You prefer command-line tools
-- You need core statistical features only
-- You want automatic dependency management
-
-### Choose Source Distribution If:
-- You need multiple profiling engines
-- You want specialized HTML reports
-- You prefer interactive tool selection
-- You need the full feature set
 
 ## Usage Workflow
 
@@ -241,9 +133,9 @@ sequenceDiagram
     Output->>User: HTML reports and statistics
 ```
 
-## Environment Management (Source Distribution)
+## Environment Management
 
-The source distribution uses three specialized conda environments for maximum functionality and tool compatibility:
+The suite uses three specialized conda environments for maximum functionality and tool compatibility:
 
 ### csv-profiler-main
 - **Purpose**: Core statistical analysis and data processing
@@ -288,13 +180,10 @@ graph TD
 
 ## Documentation
 
-### For Source Distribution
-- [Source Distribution](docs/Source%20Suite%20Guide.md) - Full setup
-
-### For PyPI Package
-- Installation: `pip install autocsv-profiler`
-- Usage: `autocsv-profiler --help`
-- PyPI Page: [https://pypi.org/project/autocsv-profiler/](https://pypi.org/project/autocsv-profiler/)
+- [Usage Guide](docs/Source-Suite-Guide.md) - Full documentation
+- [Installation Guide](docs/Source-Suite-Guide.md#installation) - Setup instructions
+- [Environment Management](docs/Source-Suite-Guide.md#environments) - Managing conda environments
+- [Troubleshooting](docs/Source-Suite-Guide.md#troubleshooting) - Common issues and solutions
 
 ## Contributing
 
@@ -304,14 +193,22 @@ graph TD
 4. Add tests if applicable
 5. Submit a pull request
 
-## License
+## License & Disclaimer
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
+**Important Notice:** This software is provided "as is" without warranty of any kind. Users are responsible for:
+- Installing and maintaining conda environments
+- Ensuring license compliance of all dependencies
+- Data accuracy and analysis interpretation
+- Backup and security of processed data
+
+See [NOTICE](NOTICE) file for complete third-party license information.
+
 ## Support
 
-- Create an [issue](https://github.com/dhaneshbb/AutoCSV-Profiler-Suite/issues) for bug reports
-- Check [troubleshooting guide](docs/docs/Source%20Suite%20Guide.md) for common problems
+- Create an [issue](https://github.com/dhaneshbb/autocsv-profiler-suite/issues) for bug reports
+- Check [troubleshooting guide](docs/Source-Suite-Guide.md#troubleshooting) for common problems
 - Review [changelog](CHANGELOG.md) for recent updates
 
 ## Version

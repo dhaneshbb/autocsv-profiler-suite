@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+"""
+autocsv-profiler-suite - CSV Delimiter Detection
+Licensed under the MIT License. See LICENSE file for details.
+"""
+
 import sys
 import csv
 import subprocess
@@ -34,15 +40,6 @@ def log_success(message):
     """Print success message in green"""
     colored_print(f"SUCCESS: {message}", Colors.OKGREEN, bold=True)
 
-def install_missing_packages():
-    """Installs missing required packages if not already installed."""
-    required_packages = ["pandas"]
-    for package in required_packages:
-        try:
-            __import__(package)
-        except ImportError:
-            print(f"Installing missing package: {package}...")
-            subprocess.check_call([sys.executable, "-m", "pip", "install", package])
 
 def detect_delimiter(csv_file):
     common_delimiters = [',', ';', '\t', '|', ':']
@@ -78,7 +75,6 @@ def print_csv_head(csv_file):
         print(f"Error reading the CSV file: {e}")
 
 if __name__ == "__main__":
-    install_missing_packages()  # Ensure required packages are installed
 
     if len(sys.argv) != 2:
         print("Usage: python recognize_delimiter.py <csv_file_path>")

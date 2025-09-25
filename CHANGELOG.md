@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to AutoCSV Profiler Suite will be documented in this file.
+All notable changes to autocsv-profiler-suite will be documented in this file.
 
 ## [1.1.0] 
 
@@ -16,15 +16,18 @@ All notable changes to AutoCSV Profiler Suite will be documented in this file.
 
 ### Added
 - Interactive environment manager (`setup_environments.ps1`)
-- Comprehensive documentation with workflow diagrams
-- Modern Python packaging configuration (`pyproject.toml`)
+- Documentation with workflow diagrams
+- Legal documentation (LICENSE, NOTICE files)
 - Environment status display and management tools
+- Source file license headers for MIT License compliance
+- Multi-environment exclusive focus (removed PyPI package references)
 
 ### Improved
 - **Dependency Management**: Eliminated package conflicts through conda isolation
-- **Installation Process**: One-click environment setup with automatic dependency resolution
-- **Documentation**: Added visual guides with mermaid diagrams for better understanding
-- **Error Handling**: Enhanced user feedback and troubleshooting guidance
+- **Installation Process**: Environment setup through conda
+- **Documentation**: Added visual guides with mermaid diagrams
+- **Error Handling**: Better user feedback and troubleshooting guidance
+- **Code Quality**: Removed auto-installation code for more reliable execution
 
 ### Fixed
 - Package version conflicts between profiling tools
@@ -40,11 +43,10 @@ All notable changes to AutoCSV Profiler Suite will be documented in this file.
   - `profile_ydata_profiling_report.py` - YData profiling reports
   - `profile_sweetviz_report.py` - SweetViz visual reports
   - `profile_dataprep_report.py` - DataPrep EDA reports
-  - `cerberus_validator_specific_columns.py` - Schema validation
   - `recognize_delimiter.py` - Automatic delimiter detection
 - Batch orchestration script (`run_analysis.bat`)
-- Three isolated environments for conflict-free tool execution
-- Comprehensive output artifacts (HTML reports, visualizations, cleaned data)
+- Three isolated environments for tool execution
+- Output artifacts (HTML reports, visualizations, cleaned data)
 - Sample dataset and example outputs
 - MIT License
 

@@ -1,6 +1,6 @@
 ---
 name: Bug Report
-about: Create a report to help us improve AutoCSV Profiler Suite
+about: Create a report to help us improve autocsv-profiler-suite
 title: '[BUG] '
 labels: bug
 assignees: ''
@@ -14,7 +14,7 @@ A clear and concise description of what the bug is.
 - **OS**: Windows [version]
 - **Python Version**: [e.g., 3.11.7]
 - **Conda Version**: [e.g., 25.5.1]
-- **AutoCSV Version**: [e.g., 1.1.0]
+- **autocsv-profiler-suite Version**: [e.g., 1.1.0]
 - **Environment**: [csv-profiler-main/profiling/dataprep]
 
 ## Steps to Reproduce

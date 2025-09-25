@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+"""
+autocsv-profiler-suite - DataPrep Report Generator
+Licensed under the MIT License. See LICENSE file for details.
+"""
+
 import sys
 import subprocess
 import os
@@ -35,26 +41,10 @@ def log_success(message):
     """Print success message in green"""
     colored_print(f"SUCCESS: {message}", Colors.OKGREEN)
 
-def install_missing_packages():
-    """Installs required packages if they are not already installed."""
-    required_packages = [
-        "dataprep",
-        "pandas"
-    ]
-
-    for package in required_packages:
-        package_name = package.split("==")[0] if "==" in package else package
-        try:
-            __import__(package_name.replace("-", "_"))  # Convert dataprep to dataprep for import check
-        except ImportError:
-            print(f"Installing missing package: {package}...")
-            subprocess.check_call([sys.executable, "-m", "pip", "install", package])
 
 def main():
     """Main function to generate the dataprep EDA report."""
-    install_missing_packages()  # Ensure required packages are installed
-
-    from dataprep.eda import create_report  # Import after ensuring installation
+    from dataprep.eda import create_report
 
     if len(sys.argv) != 3:
         print("Usage: python script.py <path_to_csv_file> <delimiter>")

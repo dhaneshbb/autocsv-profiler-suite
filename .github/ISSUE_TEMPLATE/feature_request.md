@@ -1,6 +1,6 @@
 ---
 name: Feature Request
-about: Suggest an idea for AutoCSV Profiler Suite
+about: Suggest an idea for autocsv-profiler-suite
 title: '[FEATURE] '
 labels: enhancement
 assignees: ''

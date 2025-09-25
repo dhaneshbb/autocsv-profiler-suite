@@ -6,6 +6,10 @@ __pycache__/
 # C extensions
 *.so
 
+# folders
+.project/
+.bkup/
+
 # Distribution / packaging
 .Python
 build/
@@ -195,6 +199,11 @@ Temporary Items
 
 # Project Specific Files
 
+# Conda Environment Directories
+csv-profiler-main/
+csv-profiler-profiling/
+csv-profiler-dataprep/
+
 # Analysis Output Directories
 output/
 results/
@@ -203,6 +212,7 @@ analysis_results/
 *_analysis/
 *_analysis_results/
 *_profiling_results/
+*_outputs/
 
 # Generated Reports
 *.html
@@ -231,41 +241,27 @@ distinct_values_count_by_dtype.html
 *.jpg
 *.jpeg
 *.pdf
-!docs/*.png
-!docs/*.jpg
-!docs/*.svg
-!assets/*.gif
-!assets/*.png
+*.svg
+!docs/assets/*.gif
+!docs/assets/*.png
+!docs/assets/*.svg
 
-# Text Output Files
-*.txt
-!README.txt
-!LICENSE.txt
+# Statistics and Summary Files
+*_statistics*.txt
+*_summary*.txt
+missing_values_report.txt
+outliers_summary.txt
+categorical_summary.txt
+summary_statistics_all.txt
+duplicated_rows.csv
+imputed_data.csv
 
-# Log Files
-*.log
-*.out
-*.err
+# PowerShell and Batch Logs
+*.ps1.log
+*.bat.log
 
-# Temporary Files
-temp/
-tmp/
-temporary/
-.temp/
-.tmp/
-
-# Backup Files
-*.bak
-*.backup
-*~
-*.orig
-
-# Archive Files
-*.zip
-*.tar
-*.tar.gz
-*.rar
-*.7z
+# Windows System Files
+*.lnk
 
 # Configuration Files (user-specific)
 config.ini
@@ -284,3 +280,13 @@ my_data/
 .cache/
 cache/
 .data_cache/
+.conda/
+
+# Conda Package Cache
+pkgs/
+
+# Release Directories and Files
+.Release/
+*.zip
+*-v*.zip
+autocsv-profiler-suite-*.zip
