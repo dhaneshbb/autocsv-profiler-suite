@@ -29,7 +29,6 @@ exclude *.pyc
 exclude *.pyo
 
 # Exclude git-specific files
-exclude .gitignore
 exclude .gitkeep
 
 # Exclude IDE files
