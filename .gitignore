@@ -152,13 +152,10 @@ bandit-report.json
 *.pickle
 *.pkl
 
-# Images (except docs)
-*.png
+# Images
 *.jpg
 *.jpeg
 *.pdf
-!docs/*.png
-!docs/*.jpg
 
 # Temporary files
 *.tmp
