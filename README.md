@@ -181,7 +181,7 @@ python bin/run_analysis.py data.csv
 python bin/run_analysis.py --debug
 ```
 
-**Advanced:** Python API (requires proper environment setup):
+Python API (requires proper environment setup):
 
 ```python
 # Note: ImportError may occur in multi-environment setup
