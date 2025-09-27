@@ -1,0 +1,257 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Testing / coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+!docs/*.ipynb
+!examples/*.ipynb
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# IDEs
+.idea/
+.vscode/
+*.code-workspace
+.history/
+
+# Operating System Files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Project directories
+.bkup/
+.Release/
+output/
+results/
+reports/
+analysis_results/
+*_analysis/
+*_analysis_results/
+*_profiling_results/
+my_analysis/
+personal_reports/
+client_data/
+proprietary_datasets/
+user_data/
+personal_data/
+my_data/
+
+# Generated files
+*.html
+profiling_report.html
+sweetviz_report.html
+dataprep_report.html
+distinct_values_count_by_dtype.html
+*.log
+*.out
+*.err
+logs/
+bandit-report.json
+
+# Data files
+*.csv
+!examples/*.csv
+!examples/**/*.csv
+*.xlsx
+*.xls
+*.parquet
+*.feather
+*.pickle
+*.pkl
+
+# Images (except docs)
+*.png
+*.jpg
+*.jpeg
+*.pdf
+!docs/*.png
+!docs/*.jpg
+
+# Temporary files
+*.tmp
+*.temp
+*.TMP
+*.TEMP
+temp/
+tmp/
+temporary/
+.temp/
+.tmp/
+*.bak
+*.backup
+*.orig
+
+# Cache directories
+.cache/
+cache/
+.data_cache/
+
+# Release packages
+*.zip
+*.tar.gz
+autocsv-profiler-suite-v*.zip
+
+# Security files
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+*.der
+credentials.json
+secrets.json
+.secrets
+.credentials
+auth.json
+token.json
+api_keys.txt
+passwords.txt
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+*.pub
+.ssh/
+.env.secret
+.env.*.secret
+.environment
+
+# Configuration overrides
+local_config.yml
+user_settings.json
+personal_preferences.ini
+
+# Build artifacts
+_build/
+.buildinfo
+.doctrees/
+docs/_build/
+.pybuilder/
+target/
+conda-bld/
+.conda/
+.mamba/
+envs/
+
+# Development tools
+*.swp
+*.swo
+.project/
+.project/.license_audit_*/
+.project/.license_safe_audit_*/
+pip-licenses_*.csv
+*_pip_show_output/
+license_audit_*.json
+compliance_report_*.html
+
+# Model files
+*.model
+*.joblib
+*.onnx
+*.pb
+*.pth
+*.pt
+
+# Performance data
+*.prof
+*.cProfile
+memory_usage.*
+performance_metrics.*
+
+# Specific test outputs
+test_output/application_train.csv
+test_output/bank-additional.csv
