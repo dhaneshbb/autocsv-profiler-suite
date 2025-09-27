@@ -1,0 +1,46 @@
+AutoCSV Profiler Suite
+Copyright (c) 2025 dhaneshbb
+
+DISTRIBUTION SCOPE:
+This project distributes only:
+- Python source code (MIT License)
+- Conda environment specifications (configuration files)
+- Documentation and setup scripts
+
+NOT DISTRIBUTED:
+- No conda packages or dependencies
+- No compiled binaries or libraries
+- No third-party software components
+
+THIRD-PARTY TOOLS REFERENCED:
+This project provides configuration files that may reference external open-source libraries.
+These libraries remain under their original licenses and are not distributed with this project:
+
+Core Libraries:
+- pandas - Copyright (c) 2008-2011, AQR Capital Management, LLC, Lambda Foundry, Inc. and PyData Development Team; Copyright (c) 2011-2023, Open source contributors (BSD-3-Clause)
+- NumPy - Copyright (c) 2005-2024, NumPy Developers (BSD-3-Clause)
+- SciPy - Copyright (c) 2001-2002 Enthought, Inc. 2003-2024, SciPy Developers (BSD-3-Clause)
+- matplotlib - Copyright (c) 2012- Matplotlib Development Team (PSF-2.0)
+- seaborn - Copyright (c) 2012-2024, Michael Waskom (BSD-3-Clause)
+
+Analysis Tools:
+- YData Profiling - YData Labs Inc <opensource@ydata.ai> (MIT)
+- SweetViz - Francois Bertrand <fb@fbdesignpro.com> (MIT)
+- DataPrep - SFU Database System Lab (MIT)
+
+Utility Libraries:
+- rich - Copyright (c) 2020 Will McGugan (MIT)
+- tqdm - Copyright (c) 2013 noamraph (MPL-2.0/MIT)
+- PyYAML - Copyright (c) 2017-2021 Ingy döt Net and Kirill Simonov (MIT)
+- psutil - Copyright (c) 2009, Jay Loden, Dave Daeschler, Giampaolo Rodola (BSD-3-Clause)
+
+USER RESPONSIBILITY:
+Users are responsible for installing conda environments and ensuring
+license compliance of all installed packages. Some dependencies may be
+licensed under GPL, LGPL, MPL, or other terms that impose obligations
+separate from this project's MIT license.
+
+To review dependency licensing information, activate an environment and run:
+conda list --show-channel-urls
+
+Contact: dhaneshbb5@gmail.com

@@ -1,4 +1,4 @@
-autocsv-profiler-suite
+AutoCSV Profiler Suite
 Copyright (c) 2025 dhaneshbb
 
 DISTRIBUTION SCOPE:
@@ -17,25 +17,22 @@ This project provides configuration files that may reference external open-sourc
 These libraries remain under their original licenses and are not distributed with this project:
 
 Core Libraries:
-- pandas=2.3.1/1.5.3 (BSD-3-Clause)
-- numpy=2.2.6 (BSD-3-Clause)
-- scipy=1.13.1 (BSD-3-Clause)
-- matplotlib-base (PSF)
-- seaborn=0.13.2 (BSD-3-Clause)
-- scikit-learn>=1.2.0 (BSD-3-Clause)
-- statsmodels>=0.13.0 (BSD-3-Clause)
+- pandas - Copyright (c) 2008-2011, AQR Capital Management, LLC, Lambda Foundry, Inc. and PyData Development Team; Copyright (c) 2011-2023, Open source contributors (BSD-3-Clause)
+- NumPy - Copyright (c) 2005-2024, NumPy Developers (BSD-3-Clause)
+- SciPy - Copyright (c) 2001-2002 Enthought, Inc. 2003-2024, SciPy Developers (BSD-3-Clause)
+- matplotlib - Copyright (c) 2012- Matplotlib Development Team (PSF-2.0)
+- seaborn - Copyright (c) 2012-2024, Michael Waskom (BSD-3-Clause)
 
 Analysis Tools:
-- ydata-profiling=4.16.1 (MIT)
-- sweetviz=2.3.1 (MIT)
-- dataprep=0.4.5 (MIT)
+- YData Profiling - YData Labs Inc <opensource@ydata.ai> (MIT)
+- SweetViz - Francois Bertrand <fb@fbdesignpro.com> (MIT)
+- DataPrep - SFU Database System Lab (MIT)
 
 Utility Libraries:
-- tqdm=4.67.1 (MPL-2.0 OR MIT)
-- tableone=0.9.5 (MIT)
-- missingno>=0.5.2 (MIT)
-- tabulate=0.9.0 (MIT)
-- researchpy=0.3.6 (BSD-3-Clause)
+- rich - Copyright (c) 2020 Will McGugan (MIT)
+- tqdm - Copyright (c) 2013 noamraph (MPL-2.0/MIT)
+- PyYAML - Copyright (c) 2017-2021 Ingy döt Net and Kirill Simonov (MIT)
+- psutil - Copyright (c) 2009, Jay Loden, Dave Daeschler, Giampaolo Rodola (BSD-3-Clause)
 
 USER RESPONSIBILITY:
 Users are responsible for installing conda environments and ensuring
@@ -43,22 +40,7 @@ license compliance of all installed packages. Some dependencies may be
 licensed under GPL, LGPL, MPL, or other terms that impose obligations
 separate from this project's MIT license.
 
-CURRENT ENVIRONMENT SPECIFICATIONS:
-As of version 1.1.0, this project references the following dependency versions:
-
-Main Environment (csv-profiler-main):
-- Python 3.11.7
-- Core libraries with version constraints as specified in environments/environment-main.yml
-
-Profiling Environment (csv-profiler-profiling):
-- Python 3.10.4
-- Specialized tools with strict version constraints in environments/environment-profiling.yml
-
-DataPrep Environment (csv-profiler-dataprep):
-- Python 3.10.4
-- DataPrep toolkit as specified in environments/environment-dataprep.yml
-
-To review actual installed dependency licensing information, activate an environment and run:
+To review dependency licensing information, activate an environment and run:
 conda list --show-channel-urls
 
 Contact: dhaneshbb5@gmail.com

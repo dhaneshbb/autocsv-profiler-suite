@@ -1,0 +1,208 @@
+# ============================================================================
+# AUTOCSV PROFILER SUITE - PROJECT CONFIGURATION
+# ============================================================================
+# Multi-environment CSV data analysis orchestrator
+#
+# NOTE: This project is intentionally NON-PACKAGEABLE due to irreconcilable
+# dependency conflicts between profiling libraries. See docs/ARCHITECTURE.md
+# Dependencies are managed via conda environments in config/master_config.yml
+# DISTRIBUTION: Source code and configuration only - users install dependencies
+
+# ----------------------------------------------------------------------------
+# Project Metadata
+# ----------------------------------------------------------------------------
+
+[project]
+name = "autocsv-profiler-suite"
+version = "2.0.0"
+description = "Source code and configuration for multi-environment CSV data analysis"
+authors = [{ name = "dhaneshbb", email = "dhaneshbb5@gmail.com" }]
+license = { text = "MIT" }
+# NOTE: Third-party conda dependencies have various licenses - see NOTICE file
+readme = "README.md"
+keywords = ["csv", "data-analysis", "profiling", "statistics", "pandas"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.10"
+
+# NOTE: Dependencies are managed via conda environments - see config/master_config.yml
+# No dependencies declared here due to irreconcilable conflicts between profiling libraries
+# Base environment dependencies: install requirements.txt for setup and optional requirements-dev.txt for development
+
+# ----------------------------------------------------------------------------
+# Project URLs
+# ----------------------------------------------------------------------------
+
+[project.urls]
+Homepage = "https://github.com/dhaneshbb/autocsv-profiler-suite"
+Documentation = "https://github.com/dhaneshbb/autocsv-profiler-suite/tree/main/docs"
+Repository = "https://github.com/dhaneshbb/autocsv-profiler-suite.git"
+Issues = "https://github.com/dhaneshbb/autocsv-profiler-suite/issues"
+
+# ============================================================================
+# TOOL CONFIGURATIONS
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# Code Formatting
+# ----------------------------------------------------------------------------
+
+[tool.black]
+line-length = 88
+target-version = ["py310", "py311", "py312"]
+include = "\\.pyi?$"
+extend-exclude = '''
+/(
+    # directories
+    \\.eggs
+  | \\.git
+  | \\.mypy_cache
+  | \\.venv
+  | \\.bkup
+  | _build
+  | build
+  | dist
+  | htmlcov
+)/
+'''
+
+# ----------------------------------------------------------------------------
+# Import Sorting
+# ----------------------------------------------------------------------------
+
+[tool.isort]
+profile = "black"
+line_length = 88
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+ensure_newline_before_comments = true
+
+# ----------------------------------------------------------------------------
+# Type Checking
+# ----------------------------------------------------------------------------
+# MyPy configuration handled in environment-specific mypy_*.ini files
+# This is required for multi-environment architecture where different
+# conda environments have different packages available:
+#   - mypy_main.ini: Main environment (Python 3.11)
+#   - mypy_profiling.ini: Profiling environment (Python 3.10)
+#   - mypy_dataprep.ini: DataPrep environment (Python 3.10)
+
+# ----------------------------------------------------------------------------
+# Testing Framework
+# ----------------------------------------------------------------------------
+
+[tool.pytest.ini_options]
+# Test discovery
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+
+# Output configuration
+addopts = [
+    "--verbose",
+    "--tb=short",
+    "--strict-markers",
+    "--strict-config",
+    "--disable-warnings",
+    "--cov=autocsv_profiler",
+    "--cov-report=term-missing",
+    "--cov-report=html:htmlcov",
+    "--cov-report=xml:coverage.xml",
+    "--cov-fail-under=50",
+    "-ra"
+]
+
+# Markers for test categorization
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+    "environment: marks tests that require specific conda environments",
+    "performance: marks tests that check performance characteristics",
+    "platform: marks tests for platform-specific functionality",
+    "engines: marks tests related to profiling engines",
+    "unit: marks tests as unit tests",
+    "base_profiler: marks tests related to base profiler functionality",
+    "visualization: marks tests related to plotting and visualization",
+    "statistics: marks tests related to statistical analysis",
+    "ui: marks tests related to user interface components",
+    "plots: marks tests related to plotting functionality",
+    "stats: marks tests related to statistics functionality",
+    "components: marks tests related to UI components",
+]
+
+# Test filtering
+filterwarnings = [
+    "ignore::DeprecationWarning:pkg_resources.*",
+    "ignore::DeprecationWarning:pandas.*",
+    "ignore::DeprecationWarning:ydata_profiling.*",
+    "ignore::PendingDeprecationWarning",
+    "ignore::UserWarning:pandas.*",
+    "ignore::RuntimeWarning:numpy.*",
+]
+
+# Minimum Python version
+minversion = "3.10"
+
+# ----------------------------------------------------------------------------
+# Code Coverage
+# ----------------------------------------------------------------------------
+
+[tool.coverage.run]
+source = ["autocsv_profiler"]
+omit = [
+    "*/tests/*",
+    "*/test_*",
+    "*/__pycache__/*",
+    "*/.git/*",
+    "*/.bkup/*",
+    "setup.py",
+    "*/venv/*",
+    "*/.venv/*",
+    "autocsv_profiler/ui/interactive.py",
+    "autocsv_profiler/ui/interface.py",
+    "autocsv_profiler/ui/components.py",
+    "autocsv_profiler/plots.py",
+    "autocsv_profiler/stats.py",
+]
+branch = true
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+]
+show_missing = true
+skip_covered = false
+fail_under = 50
+
+[tool.coverage.html]
+directory = "htmlcov"
+
+# ----------------------------------------------------------------------------
+# Linting
+# ----------------------------------------------------------------------------
+# Flake8 configuration in .flake8 file (flake8 doesn't natively support pyproject.toml)
+# Future: Consider migrating to Ruff for full pyproject.toml support

@@ -1,0 +1,42 @@
+# MANIFEST.in - Distribution Control for AutoCSV Profiler Suite
+
+# Project files
+include LICENSE NOTICE DISCLAIMER README.md CHANGELOG.md CONTRIBUTING.md
+include requirements.txt requirements-dev.txt pyproject.toml
+include *.ini .bandit .editorconfig .flake8 .gitignore .pre-commit-config.yaml .secrets.baseline
+
+# Source code
+recursive-include autocsv_profiler *.py
+recursive-include bin *.py
+recursive-include scripts *.py
+recursive-include tests *.py
+
+# Configuration
+recursive-include config *.yml *.yaml
+
+# Documentation and media
+recursive-include docs *.md *.txt *.png *.gif
+recursive-include docs/examples *.py
+
+
+# Exclude cache and build artifacts
+exclude .mypy_cache
+exclude __pycache__
+exclude .pytest_cache
+exclude htmlcov
+exclude .coverage
+exclude *.pyc
+exclude *.pyo
+
+# Exclude git-specific files
+exclude .gitignore
+exclude .gitkeep
+
+# Exclude IDE files
+exclude .vscode
+exclude .idea
+
+# Exclude temporary files
+exclude *.tmp
+exclude *.log
+exclude *.bak

@@ -1,224 +1,236 @@
-# autocsv-profiler-suite
+# AutoCSV Profiler Suite
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python Support](https://img.shields.io/badge/python-3.10%20%7C%203.11-blue)](https://www.python.org/downloads/)
-[![Conda](https://img.shields.io/badge/conda-required-green)](https://docs.conda.io/en/latest/miniconda.html)
+**Multi-environment CSV data analysis orchestrator with isolated profiling engines**
 
-A multi-environment toolkit for automated CSV data analysis using profiling engines. This suite provides statistical analysis, data quality assessment, and interactive reporting through three conda environments for different analysis tools.
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Conda Required](https://img.shields.io/badge/conda-required-orange.svg)](https://docs.conda.io/)
+[![Status: Beta](https://img.shields.io/badge/status-beta-yellow.svg)](#)
+[![Platform Support](https://img.shields.io/badge/platform-windows%20%7C%20macos%20%7C%20linux-lightgrey.svg)](#)
 
-![Demo](./docs/assets/video.gif)
+AutoCSV Profiler Suite resolves dependency conflicts in data science through a multi-environment architecture that isolates profiling engines while providing a unified interface.
 
-## Installation & Usage
-```bash
-git clone https://github.com/dhaneshbb/autocsv-profiler-suite.git
-cd autocsv-profiler-suite
-.\scripts\setup_environments.ps1
-run_analysis.bat
-```
+## Project Description and Key Features
 
-**Key Features:**
-- **Three conda environments** for tool compatibility
-- **Multiple profiling engines** (YData, SweetViz, DataPrep)
-- **Interactive tool selection interface**
-- **Complete analysis workflow**
+### Problem Statement
 
-**Documentation:**
-- [Installation Guide](docs/Source-Suite-Guide.md#installation)
-- [Usage Guide](docs/Source-Suite-Guide.md#usage)
-- [Environment Management](docs/Source-Suite-Guide.md#environments)
-- [Troubleshooting](docs/Source-Suite-Guide.md#troubleshooting)
+Data science projects face dependency conflicts between profiling engines and statistical libraries. This project uses isolated conda environments to prevent conflicts while maintaining functionality.
 
-## Features
+### Key Features
 
-- **Multiple Profiling Engines**: YData Profiling, SweetViz, and DataPrep with separate conda environments
-- **Statistical Analysis**: Statistical summaries, outlier detection, missing value analysis, VIF calculation
-- **Report Generation**: HTML reports with visualizations and data insights
-- **Multi-Environment Setup**: Three conda environments for tool compatibility
-- **Environment Management**: PowerShell scripts for conda environment setup and maintenance
-- **Windows Support**: Batch scripts and PowerShell integration
-- **Conda-Only Dependencies**: Package management through conda channels
+- **Dependency Conflict Resolution**: Three specialized conda environments plus base environment prevent library conflicts
+- **Multiple Profiling Engines**: YData Profiling, SweetViz, DataPrep, and custom statistical analysis
+- **Memory Management**: Chunking for large files with 1GB default limit
+- **Interface**: Console interface with progress tracking and error handling
+- **Lazy Loading**: Engines load only when needed for performance
+- **Degradation**: Continues working even with partial engine availability
+- **Cross-Platform Support**: Windows, Linux, macOS with conda environment isolation
 
-## Project Architecture
-```mermaid
-graph TB
-    A[CSV Input File] --> B[run_analysis.bat]
-    B --> C[Delimiter Detection]
-    C --> D{User Selection}
-    
-    D --> E[csv-profiler-main<br/>Python 3.11.7]
-    D --> F[csv-profiler-profiling<br/>Python 3.10.4]
-    D --> G[csv-profiler-dataprep<br/>Python 3.10.4]
-    
-    E --> H[auto_csv_profiler.py<br/>Statistical Analysis]
-    F --> I[profile_ydata_profiling_report.py<br/>YData Reports]
-    F --> J[profile_sweetviz_report.py<br/>SweetViz Reports]
-    G --> K[profile_dataprep_report.py<br/>DataPrep EDA]
-    
-    H --> L[Output Directory]
-    I --> L
-    J --> L
-    K --> L
-    
-    L --> M[HTML Reports]
-    L --> N[Statistical Summaries]
-    L --> O[Visualizations]
-    L --> P[Cleaned Data]
-```
+**Architecture and dependency details**: [Architecture Guide](docs/ARCHITECTURE.md)
 
+## Demo
 
-## Environment Structure
-```mermaid
-graph LR
-    A[setup_environments.ps1] --> B[csv-profiler-main]
-    A --> C[csv-profiler-profiling]
-    A --> D[csv-profiler-dataprep]
-    
-    B --> E[pandas, numpy, scipy<br/>matplotlib, seaborn<br/>scikit-learn, statsmodels]
-    C --> F[ydata-profiling<br/>sweetviz]
-    D --> G[dataprep]
-    
-    style B fill:#e1f5fe
-    style C fill:#f3e5f5
-    style D fill:#e8f5e8
-```
+<div align="center">
+<img src="docs/svg/demo_video.gif" alt="AutoCSV Profiler Suite Demo" width="80%" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+</div>
 
+*Interactive demonstration of the complete analysis workflow from setup to results*
 
-## Quick Start
+## Start Guide
 
 ### Prerequisites
 
-- Windows OS with PowerShell
-- Anaconda or Miniconda installed
-- Internet connection for package downloads
-- At least 4GB RAM (recommended)
-- 3GB free disk space for environments
+- [Anaconda](https://www.anaconda.com/download) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
+- Python 3.10 or higher
+- At least 3GB free disk space (2GB for conda environments, 1GB for data/outputs)
 
-### Installation
+### Setup Steps
 
+**Complete installation instructions**: [Installation Guide](docs/INSTALLATION.md)
+
+**Quick setup:**
 ```bash
-# Clone repository
+# 1. Clone and navigate
 git clone https://github.com/dhaneshbb/autocsv-profiler-suite.git
 cd autocsv-profiler-suite
 
-# Setup all three conda environments
-.\scripts\setup_environments.ps1
-
-# Run analysis
-run_analysis.bat
+# 2. Install requirements and setup environments
+pip install -r requirements.txt
+python bin/setup_environments.py create --parallel
 ```
 
+**Run analysis:**
 
-## Usage Workflow
+   First, explore available analysis options:
+   ```bash
+   python bin/run_analysis.py --help
+   ```
 
-```mermaid
-sequenceDiagram
-    participant User
-    participant Batch as run_analysis.bat
-    participant Env as Environment Manager
-    participant Scripts as Analysis Scripts
-    participant Output as Results
-    
-    User->>Batch: Execute with CSV path
-    Batch->>Env: Activate csv-profiler-main
-    Env->>Scripts: Run delimiter detection
-    Scripts->>User: Prompt for delimiter confirmation
-    User->>Batch: Select analysis tools
-    
-    loop For each selected tool
-        Batch->>Env: Activate specific environment
-        Env->>Scripts: Run analysis script
-        Scripts->>Output: Generate reports
-    end
-    
-    Output->>User: HTML reports and statistics
-```
+   Then start the interactive analysis:
+   ```bash
+   python bin/run_analysis.py
+   ```
 
-## Environment Management
+   <table>
+   <tr>
+   <td width="50%" align="center">
 
-The suite uses three specialized conda environments for maximum functionality and tool compatibility:
+   **Analysis Command Options:**
+   <img src="docs/png/run_analysis--help.png" alt="Analysis Help" width="500px" height="350px">
 
-### csv-profiler-main
-- **Purpose**: Core statistical analysis and data processing
-- **Python Version**: 3.11.7
-- **Key Packages**: pandas, numpy, scipy, matplotlib, seaborn, scikit-learn
+   </td>
+   <td width="50%" align="center">
 
-### csv-profiler-profiling
-- **Purpose**: YData Profiling and SweetViz report generation
-- **Python Version**: 3.10.4
-- **Key Packages**: ydata-profiling, sweetviz
+   **Interactive Welcome Interface:**
+   <img src="docs/png/run_analysis start.png" alt="Analysis Interface" width="500px" height="350px">
 
-### csv-profiler-dataprep
-- **Purpose**: DataPrep EDA and data preparation tasks
-- **Python Version**: 3.10.4
-- **Key Packages**: dataprep
+   </td>
+   </tr>
+   </table>
 
-## Output Structure
+   The interface provides file selection, delimiter detection, and engine selection:
+
+   <table>
+   <tr>
+   <td width="50%" align="center">
+
+   **Choose Analysis Engines:**
+   <img src="docs/png/Engine_Selection.png" alt="Engine Selection" width="500px" height="350px">
+
+   </td>
+   <td width="50%" align="center">
+
+   **All Reports Generated Successfully:**
+   <img src="docs/png/run_analysis end.png" alt="Analysis Complete" width="500px" height="350px">
+
+   </td>
+   </tr>
+   </table>
+
+**Setup guide**: [Installation Guide](docs/INSTALLATION.md) | **Issues**: [Troubleshooting Guide](docs/TROUBLESHOOTING.md)
+
+## Architecture & Requirements
+
+### System Diagram
 
 ```mermaid
 graph TD
-    A[CSV Analysis Results] --> B[Statistical Reports]
-    A --> C[HTML Reports]
-    A --> D[Visualizations]
-    A --> E[Data Quality]
-    
-    B --> F[summary_statistics_all.txt]
-    B --> G[categorical_summary.txt]
-    B --> H[outliers_summary.txt]
-    
-    C --> I[profiling_report.html]
-    C --> J[sweetviz_report.html]
-    C --> K[dataprep_report.html]
-    
-    D --> L[Box Plots]
-    D --> M[Histograms]
-    D --> N[Correlation Heatmaps]
-    
-    E --> O[missing_values_report.txt]
-    E --> P[duplicated_rows.csv]
-    E --> Q[imputed_data.csv]
+    A[User Interface] --> B[Main Orchestrator]
+    B --> C[Base Environment<br/>Python 3.10+]
+    C --> D[Environment Manager]
+    D --> E[Main Environment<br/>Python 3.11]
+    D --> F[Profiling Environment<br/>Python 3.10]
+    D --> G[DataPrep Environment<br/>Python 3.10]
+
+    E --> H[Statistical Analysis<br/>numpy 2.2.6,
+scipy 1.13.1]
+    F --> I[YData Profiling<br/>numpy <2.2]
+    F --> J[SweetViz<br/>legacy pandas]
+    G --> K[DataPrep Engine<br/>pandas 1.5.3]
+
+    H --> L[Analysis Reports]
+    I --> L
+    J --> L
+    K --> L
+```
+
+**Architecture details**: [Architecture Guide](docs/ARCHITECTURE.md)
+
+**Summary**: Multi-environment conda architecture resolves dependency conflicts between profiling engines. Requires conda, Python 3.10+, and 3GB free disk space.
+
+## Usage Examples
+
+### Interactive Mode
+
+```bash
+python bin/run_analysis.py
+```
+
+Interactive mode includes:
+1. File selection with validation
+2. Delimiter detection (with manual override)
+3. Engine selection based on availability
+4. Progress monitoring with updates
+5. Result summary and output locations
+
+### Direct Command Line
+
+```bash
+# Analyze specific file directly
+python bin/run_analysis.py path/to/data.csv
+
+# Debug mode with detailed output
+python bin/run_analysis.py --debug
+
+# Direct analysis with debug mode
+python bin/run_analysis.py path/to/data.csv --debug
+```
+
+*Command options documentation available in Quick Start Guide above.*
+
+### Programmatic Usage
+
+**Command-line interface usage** for reliable multi-environment support:
+
+```bash
+# Interactive mode (recommended) - guides through file selection
+python bin/run_analysis.py
+
+# Direct file analysis
+python bin/run_analysis.py data.csv
+
+# Debug mode for troubleshooting
+python bin/run_analysis.py --debug
+```
+
+**Advanced:** Python API (requires proper environment setup):
+
+```python
+# Note: ImportError may occur in multi-environment setup
+# CLI interface recommended for production workflows
+try:
+    from autocsv_profiler import profile_csv
+    report_path = profile_csv("data.csv", "output_directory/")
+except ImportError:
+    print("Usage: python bin/run_analysis.py data.csv")
 ```
 
 ## Documentation
 
-- [Usage Guide](docs/Source-Suite-Guide.md) - Full documentation
-- [Installation Guide](docs/Source-Suite-Guide.md#installation) - Setup instructions
-- [Environment Management](docs/Source-Suite-Guide.md#environments) - Managing conda environments
-- [Troubleshooting](docs/Source-Suite-Guide.md#troubleshooting) - Common issues and solutions
+**Getting Started:**
+- [Installation Guide](docs/INSTALLATION.md) - Environment setup instructions
+- [Getting Started Tutorial](docs/tutorials/getting_started.md) - Step-by-step walkthrough
+- [User Guide](docs/USER_GUIDE.md) - Reference for daily usage
+
+**Technical Reference:**
+- [API Documentation](docs/api/) - Technical API reference
+- [Architecture Guide](docs/ARCHITECTURE.md) - Multi-environment design
+- [Performance Guide](docs/PERFORMANCE.md) - Optimization and benchmarks
+
+**Development:**
+- [Development Guide](docs/DEVELOPMENT.md) - Environment setup and workflow
+- [Design Decisions](docs/DESIGN_DECISIONS.md) - Architectural decision records
+- [Troubleshooting Guide](docs/TROUBLESHOOTING.md) - Common issues and solutions
+
+**Examples:**
+- [Examples Directory](docs/examples/) - samples
+- [Engine Testing Guide](docs/api/engines/ENGINE_TESTING.md) - Engine testing procedures
 
 ## Contributing
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
+See [Contributing Guide](CONTRIBUTING.md) for workflow details.
 
-## License & Disclaimer
+## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+MIT License - see [LICENSE](LICENSE) file. Third-party dependencies have various licenses - see [NOTICE](NOTICE) for details.
 
-**Important Notice:** This software is provided "as is" without warranty of any kind. Users are responsible for:
-- Installing and maintaining conda environments
-- Ensuring license compliance of all dependencies
-- Data accuracy and analysis interpretation
-- Backup and security of processed data
-
-See [NOTICE](NOTICE) file for complete third-party license information.
+**Important**: See [DISCLAIMER](DISCLAIMER) for liability limitations and dependency responsibility.
 
 ## Support
 
-- Create an [issue](https://github.com/dhaneshbb/autocsv-profiler-suite/issues) for bug reports
-- Check [troubleshooting guide](docs/Source-Suite-Guide.md#troubleshooting) for common problems
-- Review [changelog](CHANGELOG.md) for recent updates
+- **Issues**: [GitHub Issues](https://github.com/dhaneshbb/autocsv-profiler-suite/issues)
+- **Questions**: [GitHub Discussions](https://github.com/dhaneshbb/autocsv-profiler-suite/discussions)
 
-## Version
+---
 
-Current version: 1.1.0
-
-
-For version history and changes, see [CHANGELOG.md](CHANGELOG.md).
-
-
-
-
-
+**Version 2.0.0** | **Beta** | **Python 3.10-3.13** | **Cross-Platform**

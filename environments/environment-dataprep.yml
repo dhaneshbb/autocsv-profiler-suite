@@ -1,8 +1,0 @@
-name: csv-profiler-dataprep
-channels:
-  - conda-forge
-  - defaults
-dependencies:
-  - python=3.10.4
-  - pandas=1.5.3
-  - dataprep=0.4.5

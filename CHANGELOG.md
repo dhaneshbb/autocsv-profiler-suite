@@ -2,7 +2,29 @@
 
 All notable changes to autocsv-profiler-suite will be documented in this file.
 
-## [1.1.0] 
+## [v2.0.0] - sep
+
+### Added
+- **Unified orchestrator**: `bin/run_analysis.py` replacing platform-specific batch scripts
+- **Lazy loading system**: Engines load only when needed for faster startup
+- **Rich console interface**: Progress tracking and enhanced user experience
+- **Memory management**: Automatic chunking for files >50MB with 1GB default limits
+- **Cross-platform support**: Python-based entry points work on Windows/Linux/macOS
+- **BaseProfiler class**: Abstract base class for all engines with consistent interface
+- **Configuration as code**: Single `config/master_config.yml` source of truth
+
+### Changed
+- **Entry point**: Use `python bin/run_analysis.py` instead of `run_analysis.bat/.sh`
+- **Performance**: 20-30% improvement with modern pandas 2.3.1 and numpy 2.2.6
+- **Package structure**: Reorganized as `autocsv_profiler` Python package
+- **Engine isolation**: Multi-environment architecture (base orchestrator + 3 specialized conda environments)
+
+### Breaking Changes
+- **API changes**: BaseProfiler constructor now includes `chunk_size` and `memory_limit_gb` parameters
+- **Script replacement**: Batch files no longer provided, use Python orchestrator
+- **Import changes**: Module renamed from individual scripts to unified `autocsv_profiler` package
+
+## [v1.1.0] - agu
 
 ### Changed
 - **Environment System**: Migrated from virtual environments to conda environments for better dependency management
@@ -34,7 +56,7 @@ All notable changes to autocsv-profiler-suite will be documented in this file.
 - Environment activation reliability on Windows systems
 - Consistent package versions across installations
 
-## [1.0.0] 
+## [v1.0.0] - apr
 
 ### Added
 - Initial release with virtual environment support
@@ -45,7 +67,7 @@ All notable changes to autocsv-profiler-suite will be documented in this file.
   - `profile_dataprep_report.py` - DataPrep EDA reports
   - `recognize_delimiter.py` - Automatic delimiter detection
 - Batch orchestration script (`run_analysis.bat`)
-- Three isolated environments for tool execution
+- Three specialized conda environments plus base environment for tool execution
 - Output artifacts (HTML reports, visualizations, cleaned data)
 - Sample dataset and example outputs
 - MIT License

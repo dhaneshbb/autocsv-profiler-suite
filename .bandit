@@ -1,0 +1,19 @@
+# Bandit configuration for AutoCSV Profiler Suite
+# Focus on HIGH severity security issues only
+
+exclude_dirs:
+  - tests
+
+# Skip acceptable low-risk issues for data analysis tools
+skips:
+  - B110  # try_except_pass - Acceptable for defensive programming
+  - B301  # pickle.load - Controlled internal data serialization (temp files only)
+  - B403  # import_pickle - Required for data serialization
+  - B404  # import_subprocess - Required for conda environment management
+  - B101  # assert_used - Used for type narrowing in development
+  - B603  # subprocess_without_shell - Controlled subprocess usage
+  - B605  # start_process_with_shell - Required for cross-platform terminal clearing
+  - B607  # start_process_with_partial_path - System commands (cls/clear)
+
+# Only report HIGH severity issues
+severity: high
