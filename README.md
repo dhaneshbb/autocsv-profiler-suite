@@ -32,6 +32,22 @@ Data science projects face dependency conflicts between profiling engines and st
 
 **Architecture and dependency details**: [Architecture Guide](docs/ARCHITECTURE.md)
 
+<p align="center">
+  <img src="docs/media/thumbnails/1.png" alt="AutoCSV Profiler Suite preview 1">
+</p>
+
+<p align="center">
+  <img src="docs/media/thumbnails/2.png" alt="AutoCSV Profiler Suite preview 2">
+</p>
+
+<p align="center">
+  <img src="docs/media/thumbnails/3.png" alt="AutoCSV Profiler Suite preview 3">
+</p>
+
+<p align="center">
+  <img src="docs/media/thumbnails/4.png" alt="AutoCSV Profiler Suite preview 4">
+</p>
+
 <div align="center">
 <img src="docs/svg/demo_video.gif" alt="AutoCSV Profiler Suite Demo" width="80%" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 </div>
